@@ -143,7 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 // 18 Destructuring Object and Arrays
-const book = getBook(1);
+const book = getBook(2);
 
 //const title = book.title;
 
@@ -179,5 +179,14 @@ const updatedBook = {...book,
 
 //console.log(updatedBook);
 
-const summary = `${title}, a ${updatedBook.pages}-page long book, was written by ${author} and published in ${publicationDate.split("-")[0]}`;
+//  20. Template Literals
+const summary = `${title}, a ${updatedBook.pages}-page long book, was written by ${author} and published in ${
+  publicationDate.split("-")[0]
+}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie` ;
 console.log(summary);
+
+
+// 21. Ternaries Instead of if/else Statements
+
+const pagesRange = getBooks.pages > 1000 ? 'over a thousand' : 'less than a thousand';
+console.log(`The book has ${pagesRange} pages`)
