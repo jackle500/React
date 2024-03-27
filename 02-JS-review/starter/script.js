@@ -142,3 +142,42 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+// 18 Destructuring Object and Arrays
+const book = getBook(1);
+
+//const title = book.title;
+
+//const author = book.author;
+//console.log(book);
+//console.log(title);
+//console.log(author);
+
+const {title, author, publicationDate, genres, hasMovieAdaptation} = book;
+
+//console.log(author, title, genres);
+
+//const primaryGenres = genres[0];
+//const secondaryGenres = genres[1];
+
+//Rest Operator
+const[primaryGenres, secondaryGenres, ...otherGenres] = genres;
+
+console.log(" ");
+//console.log(primaryGenres, secondaryGenres, otherGenres);
+
+//Spread Operator
+const newGenres = ["epic fantasy", ...genres]
+console.log(newGenres);
+
+
+const updatedBook = {...book,
+  // Adding a new property
+  moviePublicationDate:"2001-12-19",
+  // Overwriting an existing property
+  pages: 1210,}
+
+
+console.log(updatedBook);
+/*
+const summary = `${title} a book`;
+console.log(summary);*/
