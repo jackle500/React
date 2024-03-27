@@ -167,7 +167,7 @@ console.log(" ");
 
 //Spread Operator
 const newGenres = ["epic fantasy", ...genres]
-console.log(newGenres);
+//console.log(newGenres);
 
 
 const updatedBook = {...book,
@@ -177,7 +177,7 @@ const updatedBook = {...book,
   pages: 1210,}
 
 
-console.log(updatedBook);
-/*
-const summary = `${title} a book`;
-console.log(summary);*/
+//console.log(updatedBook);
+
+const summary = `${title}, a ${updatedBook.pages}-page long book, was written by ${author} and published in ${publicationDate.split("-")[0]}`;
+console.log(summary);
