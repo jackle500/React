@@ -190,3 +190,35 @@ console.log(summary);
 
 const pagesRange = getBooks.pages > 1000 ? 'over a thousand' : 'less than a thousand';
 console.log(`The book has ${pagesRange} pages`)
+
+// 21. Arrow Functions
+/*
+function getYear(str) {
+  return str.split("-")[0];
+}*/
+
+const getYear = (str) => str.split("-")[0];
+
+console.log(getYear(publicationDate));
+
+//  23. Short-Circuiting And Logical Operators: &&, ||, ??
+
+console.log(true && "Some String");
+console.log(false && "Some String");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+//falsy :0 '', null, undefined
+console.log('jonas' && "Some String");
+console.log(0 && "some String");
+
+console.log(true || "Some String");
+console.log(false || "Some String");
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+console.log(spanishTranslation);
+
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.reviewsCount || 'No Data';
+console.log(countWrong);
