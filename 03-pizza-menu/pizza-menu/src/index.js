@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom/client";
 import './index.css';
 
-
+// objects of pizzas
 const pizzaData = [
     {
         name: "Focaccia",
@@ -47,7 +47,7 @@ const pizzaData = [
         soldOut: false,
     },
 ];
-
+// main app
 function App() {
     return (
         <div className={"container"}>
@@ -57,7 +57,7 @@ function App() {
         </div>
     );
 }
-
+// Header of the app
 function Header() {
     const style = {};
 
@@ -67,7 +67,7 @@ function Header() {
         </header>
     );
 }
-
+//the main menu
 function Menu() {
     const pizzas = pizzaData;
     //const pizzas = [];

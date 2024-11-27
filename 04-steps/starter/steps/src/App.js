@@ -6,8 +6,15 @@ const messages = [
     "Invest your new income 🤑",
 ];
 
-
-export default function App(){
+export default function App() {
+    return (
+        <div>
+            <Steps/>
+            <Steps/>
+        </div>
+    );
+}
+ function Steps(){
     const [step, setStep] = useState(1)
     const [isOpen, setIsOpen] = useState(true);
 
@@ -20,7 +27,7 @@ export default function App(){
             setStep((s) => s + 1);
     }
     return (
-        <>
+        <div>
             <button className="close" onClick={() => setIsOpen((is) => !is)}>
                 &times;
             </button>
@@ -39,7 +46,7 @@ export default function App(){
 
                     <div className="buttons">
                         <button style={{backgroundColor: "#7950f2", color: "white"}}
-                                onClick={handlePrevious}>
+                                onClick={handlePqrevious}>
                             Previous
                         </button>
                         <button style={{backgroundColor: "#7950f2", color: "white"}}
@@ -49,6 +56,6 @@ export default function App(){
                     </div>
                 </div>
             )}
-        </>
-    )
+        </div>
+    );
 }
